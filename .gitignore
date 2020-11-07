@@ -4,5 +4,6 @@
 
 /.vs
 /OD-authorize-authenticate/.vs/OD-authorize-authenticate
-/OD-authorize-authenticate/bin/Debug/netcoreapp3.1
-/OD-authorize-authenticate/obj/Debug/netcoreapp3.1/staticwebassets
+/OD-authorize-authenticate/bin/
+/OD-authorize-authenticate/obj/
+

@@ -12,12 +12,20 @@ using OD_authorize_authenticate.Data;
 
 namespace OD_authorize_authenticate.Controllers
 {
+
+    [Route("[controller]")]
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
-        
-        // GET: AdminController/Create
+        public AdminController()
+        {
+
+        }
+
+        // GET: Admin
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Route("")]
+        [Route("[action]")]
         public ActionResult Main()
         {
             return View();

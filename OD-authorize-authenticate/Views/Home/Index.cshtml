@@ -1,8 +1,17 @@
 ﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1>Welcome</h1>
+    <p>This is an example service of authentication and authorization functions.</p>
+    <div style="height:30pt"></div>
+    <p>Click the button to go to login page:</p>
+    <div style="display:flex;justify-content:center; flex-direction:row">
+        <div class="button">
+            <a href="/Home/Login">Log in</a>
+        </div>
+    </div>
+
 </div>

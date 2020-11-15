@@ -1,6 +1,10 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Privacy";
+    ViewData["username"] = Context.User.Identity.Name;
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<p>This is private page</p>
+<p>Only authorized person can see this page</p>
+<p>The secret content is: 10-2</p>

@@ -29,11 +29,15 @@ namespace OD_authorize_authenticate
         {
             services.AddControllersWithViews();
 
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(configureOptions =>
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            }).AddCookie(configureOptions =>
                 {
-                    configureOptions.LoginPath = "/Admin/Login";
-                    configureOptions.LogoutPath = "/Admin/Logout";
+                    configureOptions.Cookie.Path = "/";
+                    configureOptions.LoginPath = "/Home/Login";
+                    configureOptions.LogoutPath = "/Home/Logout";
                     configureOptions.Cookie.Name = "ODExample.Cookie.Auth.C.Sharp.Is.Best";
                 });
 
@@ -52,7 +56,6 @@ namespace OD_authorize_authenticate
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
@@ -77,16 +80,14 @@ namespace OD_authorize_authenticate
             {
                 MinimumSameSitePolicy = SameSiteMode.Strict
             };
-            app.UseCookiePolicy(cookiePolicyOptions);
+            
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseCookiePolicy(cookiePolicyOptions);
 
             app.UseEndpoints(endpoints =>
             {
-                app.UseEndpoints(endpoints =>
-                {
-                    endpoints.MapControllers();
-                });
+                endpoints.MapControllers();
             });
         }
     }

@@ -20,7 +20,7 @@ namespace OD_authorize_authenticate.Data
             new KeyValuePair<string, List<Claim>>("Administrator",
                 new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, "Marcin"),
+                    new Claim(ClaimTypes.Name, "Administrator"),
                     new Claim(ClaimTypes.Role, "User"),
                     new Claim(ClaimTypes.Role, "Admin")
                 })

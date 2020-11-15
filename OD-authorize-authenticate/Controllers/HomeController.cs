@@ -14,8 +14,8 @@ using OD_authorize_authenticate.Models;
 
 namespace OD_authorize_authenticate.Controllers
 {
-    [AllowAnonymous]
-    [Route("[controller]/[action]")]
+    [Authorize]
+    [Route("[controller]")]
     public class HomeController : Controller
     { 
         public HomeController()
@@ -23,21 +23,28 @@ namespace OD_authorize_authenticate.Controllers
 
         }
 
+        [AllowAnonymous]
+        [Route("")]
+        [Route("[action]")]
         public IActionResult Index()
         {
             return View();
         }
 
+        [AllowAnonymous]
         [HttpGet]
+        [Route("[action]")]
         public ActionResult Login()
         {
             return View();
         }
 
+        [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> Login([FromForm] object username)
+        [Route("[action]")]
+        public async Task<IActionResult> Login([FromForm] LoginModel loginModel)
         {
-            string name = username.ToString();
+            string name = loginModel.Login ?? string.Empty;
             if (UserInfo.users.ContainsKey(name))
             {
                 var claimsIdentity = new ClaimsIdentity(
@@ -50,29 +57,25 @@ namespace OD_authorize_authenticate.Controllers
             }
             else
             {
+                ViewData["error"] = "Wrong username";
                 return View();
             }
-            return View("Privacy");
+            return RedirectToAction("Privacy");
         }
 
-        [Authorize]
         [HttpGet]
+        [Route("[action]")]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return View();
         }
 
-        [Authorize]
+        [Route("[action]")]
         public IActionResult Privacy()
         {
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

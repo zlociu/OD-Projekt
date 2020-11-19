@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace OD_authorize_authenticate.Data
 {
@@ -26,6 +28,13 @@ namespace OD_authorize_authenticate.Data
                 })
         };
 
+        private static IEnumerable<KeyValuePair<string, string>> listPass = new List<KeyValuePair<string, string>>
+        {
+            new KeyValuePair<string, string>("Marcin", Encoding.ASCII.GetString(SHA256.Create().ComputeHash(Encoding.ASCII.GetBytes("1qa2ws3ed")))),
+            new KeyValuePair<string, string>("Administrator", Encoding.ASCII.GetString(SHA256.Create().ComputeHash(Encoding.ASCII.GetBytes("1qa2ws3ed")))),
+        };
+
         public static Dictionary<string, List<Claim>> users = new Dictionary<string, List<Claim>>(collection: list);
+        public static Dictionary<string, string> usersPasswords = new Dictionary<string, string>(collection: listPass);
     }      
 }

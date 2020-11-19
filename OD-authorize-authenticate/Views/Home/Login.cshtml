@@ -16,6 +16,9 @@
             @Html.TextBoxFor(model => model.Login, new { Placeholder = "username", Class = "text_input" })
         </div>
         <div class="form_element">
+            @Html.PasswordFor(model => model.Password, new { Placeholder = "password", Class = "text_input" })
+        </div>
+        <div class="form_element">
             <input type="submit" value="Log in" class="submit" />
         </div>
     }

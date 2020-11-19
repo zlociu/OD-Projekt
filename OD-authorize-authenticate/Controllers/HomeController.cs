@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -45,15 +47,24 @@ namespace OD_authorize_authenticate.Controllers
         public async Task<IActionResult> Login([FromForm] LoginModel loginModel)
         {
             string name = loginModel.Login ?? string.Empty;
+            string pass = loginModel.Password ?? string.Empty;
             if (UserInfo.users.ContainsKey(name))
             {
                 var claimsIdentity = new ClaimsIdentity(
                 UserInfo.users[name],
                 CookieAuthenticationDefaults.AuthenticationScheme);
-
-                await HttpContext.SignInAsync(
+                if(Encoding.ASCII.GetString(SHA256.Create().ComputeHash(Encoding.ASCII.GetBytes(pass))) == UserInfo.usersPasswords[name])
+                {
+                    await HttpContext.SignInAsync(
                     CookieAuthenticationDefaults.AuthenticationScheme,
                     new ClaimsPrincipal(claimsIdentity));
+                }
+                else
+                {
+                    ViewData["error"] = "Wrong password";
+                    return View();
+                }
+                
             }
             else
             {

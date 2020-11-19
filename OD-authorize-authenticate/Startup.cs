@@ -35,9 +35,10 @@ namespace OD_authorize_authenticate
                 options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             }).AddCookie(configureOptions =>
                 {
-                    configureOptions.Cookie.Path = "/";
+                    //configureOptions.Cookie.Path = "/";
                     configureOptions.LoginPath = "/Home/Login";
                     configureOptions.LogoutPath = "/Home/Logout";
+                    configureOptions.AccessDeniedPath = "/Home/Login";
                     configureOptions.Cookie.Name = "ODExample.Cookie.Auth.C.Sharp.Is.Best";
                 });
 
@@ -78,7 +79,7 @@ namespace OD_authorize_authenticate
 
             var cookiePolicyOptions = new CookiePolicyOptions
             {
-                MinimumSameSitePolicy = SameSiteMode.Strict
+                MinimumSameSitePolicy = SameSiteMode.Lax
             };
             
             app.UseAuthentication();

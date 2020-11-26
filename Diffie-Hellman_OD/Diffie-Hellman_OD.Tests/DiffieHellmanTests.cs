@@ -16,11 +16,24 @@ namespace Diffie_Hellman_OD.Tests
             {
                 using (var alice = new DiffieHellman())
                 {
-                    // Bob uses Alice's public key to encrypt his message.
-                    byte[] secretMessage = bob.Encrypt(alice.PublicKey, text);
+                    using(var adamB = new DiffieHellman())
+                    {
+                        using(var adamA = new DiffieHellman())
+                        {
+                            // Bob uses what he thinks is Alice's public key to encrypt his message but is using a key provided by Adam instead.
+                            byte[] secretMessage = bob.Encrypt(adamB.PublicKey, text);
 
-                    // Alice uses Bob's public key and IV to decrypt the secret message.
-                    string decryptedMessage = alice.Decrypt(bob.PublicKey, secretMessage, bob.IV);
+                            // Adam recieves the message from Bob and decrypts it
+                            string decryptedMessage = adamB.Decrypt(bob.PublicKey, secretMessage, bob.IV);
+                            decryptedMessage += " Ugly World!";
+
+                            // Adam uses Alice's public key to encrypt the changed message
+                            byte[] changedMessage = adamA.Encrypt(alice.PublicKey, decryptedMessage);
+
+                            // Alice uses what she thinks is Bob's public key and IV to decrypt the altered message.
+                            string alteredMessage = alice.Decrypt(adamA.PublicKey, changedMessage, adamA.IV);
+                        }
+                    }
                 }
             }
         }

@@ -10,6 +10,12 @@ namespace Diffie_Hellman_OD
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("DH:");
+            DH dh = new DH();
+            dh.A1();
+            dh.B1();
+            dh.kCheck();
+            dh.Display();
         }
     }
 }

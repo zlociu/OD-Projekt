@@ -10,8 +10,6 @@ namespace Diffie_Hellman_OD.Tests
         [TestMethod]
         public void Encrypt_Decrypt()
         {
-            string text = "Hello World!";
-
             using (var bob = new DiffieHellman())
             {
                 using (var alice = new DiffieHellman())
@@ -20,17 +18,19 @@ namespace Diffie_Hellman_OD.Tests
                     {
                         using(var adamA = new DiffieHellman())
                         {
+                            string text = "Hello World!";
+
                             // Bob uses what he thinks is Alice's public key to encrypt his message but is using a key provided by Adam instead.
                             byte[] secretMessage = bob.Encrypt(adamB.PublicKey, text);
 
                             // Adam recieves the message from Bob and decrypts it
                             string decryptedMessage = adamB.Decrypt(bob.PublicKey, secretMessage, bob.IV);
-                            decryptedMessage += " Ugly World!";
+                            decryptedMessage += " Goodbye World!";
 
                             // Adam uses Alice's public key to encrypt the changed message
                             byte[] changedMessage = adamA.Encrypt(alice.PublicKey, decryptedMessage);
 
-                            // Alice uses what she thinks is Bob's public key and IV to decrypt the altered message.
+                            // Alice uses what she thinks is Bob's public key to decrypt the altered message.
                             string alteredMessage = alice.Decrypt(adamA.PublicKey, changedMessage, adamA.IV);
                         }
                     }

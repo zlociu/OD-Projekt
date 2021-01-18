@@ -128,24 +128,6 @@ div.item_container {
     border-radius: 4pt;
 }
 
-div.container_size_3 {
-    flex-grow: 3.3;
-    flex-basis: 0;
-    min-width: 500pt;
-}
-
-div.container_size_2 {
-    flex-grow: 2.15;
-    flex-basis: 0;
-    min-width: 350pt;
-}
-
-div.container_size_1 {
-    flex-grow: 1;
-    flex-basis: 0;
-    min-width: 160pt;
-}
-
 div.container_align_center {
     align-items: center;
 }
@@ -252,25 +234,7 @@ a:hover, a:active, a:link, a:visited {
     text-decoration: none;
 }
 
-circle.chart {
-    fill: transparent;
-    stroke: #2196f3;
-    stroke-width: 40;
-    stroke-dasharray: 785;
-    transition: stroke-dasharray .3s ease;
-    transform-origin: center;
-    transform: rotateZ(180deg);
-}
 
-circle.chart_back {
-    fill: transparent;
-    stroke: #383f51;
-    stroke-width: 40;
-    stroke-dasharray: 785;
-    stroke-dashoffset: 392;
-    transform-origin: center;
-    transform: rotateZ(180deg);
-}
 
 rect.bar_chart {
     fill: #2196f3;

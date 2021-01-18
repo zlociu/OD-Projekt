@@ -61,8 +61,8 @@ namespace OD_authorize_authenticate
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
-
+            app.UseFileServer();
+                
             app.UseRouting();
 
             app.UseStatusCodePages(async context =>

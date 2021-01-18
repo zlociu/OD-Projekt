@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge"><script>/* <![CDATA[ */ accConf = {"rum":{"tid":"EA-1746213","boot":"disable","cookieInfo":0,"pageType":"HTML"},"events":{"endpointPaths":["/a8f4d8cd95e164917035b64b867a45dd"]}}; /* ]]> */</script>
+        <script type="text/javascript">
+        !function(){var r="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,e="function"==typeof Object.defineProperties?Object.defineProperty:function(t,e,n){t!=Array.prototype&&t!=Object.prototype&&(t[e]=n.value)};function n(){n=function(){},r.Symbol||(r.Symbol=t)}var i=0;function t(t){return"jscomp_symbol_"+(t||"")+i++}function o(){n();var t=r.Symbol.iterator;t||(t=r.Symbol.iterator=r.Symbol("iterator")),"function"!=typeof Array.prototype[t]&&e(Array.prototype,t,{configurable:!0,writable:!0,value:function(){return a(this)}}),o=function(){}}function a(t){var e,n=0;return e=function(){return n<t.length?{done:!1,value:t[n++]}:{done:!0}},o(),(e={next:e})[r.Symbol.iterator]=function(){return this},e}function l(t){o();var e=t[Symbol.iterator];return e?e.call(t):a(t)}function p(t){if(!(t instanceof Array)){t=l(t);for(var e,n=[];!(e=t.next()).done;)n.push(e.value);t=n}return t}var h=0;var m="img script iframe link audio video source".split(" ");function v(t,e){for(var n=(t=l(t)).next();!n.done;n=t.next())if(n=n.value,e.includes(n.nodeName.toLowerCase())||v(n.children,e))return!0;return!1}function w(t,e){if(2<t.length)return performance.now();for(var n=[],r=(e=l(e)).next();!r.done;r=e.next())r=r.value,n.push({timestamp:r.start,type:"requestStart"}),n.push({timestamp:r.end,type:"requestEnd"});for(r=(e=l(t)).next();!r.done;r=e.next())n.push({timestamp:r.value,type:"requestStart"});for(n.sort(function(t,e){return t.timestamp-e.timestamp}),t=t.length,e=n.length-1;0<=e;e--)switch(r=n[e],r.type){case"requestStart":t--;break;case"requestEnd":if(2<++t)return r.timestamp;break;default:throw Error("Internal Error: This should never happen")}return 0}function s(t){t=t||{},this.w=!!t.useMutationObserver,this.u=t.minValue||null,t=window.__tti&&window.__tti.e;var i,o,a,s,u,c,f,r,n,e,d=window.__tti&&window.__tti.o;this.a=t?t.map(function(t){return{start:t.startTime,end:t.startTime+t.duration}}):[],d&&d.disconnect(),this.b=[],this.f=new Map,this.j=null,this.v=-1/0,this.i=!1,this.h=this.c=this.s=null,i=this.m.bind(this),o=this.l.bind(this),a=XMLHttpRequest.prototype.send,s=h++,XMLHttpRequest.prototype.send=function(t){for(var e=[],n=0;n<arguments.length;++n)e[n-0]=arguments[n];var r=this;return i(s),this.addEventListener("readystatechange",function(){4===r.readyState&&o(s)}),a.apply(this,e)},u=this.m.bind(this),c=this.l.bind(this),f=fetch,fetch=function(t){for(var i=[],e=0;e<arguments.length;++e)i[e-0]=arguments[e];return new Promise(function(e,n){var r=h++;u(r),f.apply(null,[].concat(p(i))).then(function(t){c(r),e(t)},function(t){c(t),n(t)})})},(r=this).c=new PerformanceObserver(function(t){for(var e=(t=l(t.getEntries())).next();!e.done;e=t.next())if("resource"===(e=e.value).entryType&&(r.b.push({start:e.fetchStart,end:e.responseEnd}),y(r,w(r.g,r.b)+5e3)),"longtask"===e.entryType){var n=e.startTime+e.duration;r.a.push({start:e.startTime,end:n}),y(r,n+5e3)}}),r.c.observe({entryTypes:["longtask","resource"]}),this.w&&(this.h=(n=this.B.bind(this),(e=new MutationObserver(function(t){for(var e=(t=l(t)).next();!e.done;e=t.next())"childList"==(e=e.value).type&&v(e.addedNodes,m)?n(e):"attributes"==e.type&&m.includes(e.target.tagName.toLowerCase())&&n(e)})).observe(document,{attributes:!0,childList:!0,subtree:!0,attributeFilter:["href","src"]}),e))}function u(t){t.i=!0;var e=0<t.a.length?t.a[t.a.length-1].end:0,n=w(t.g,t.b);y(t,Math.max(n+5e3,e))}function y(o,t){!o.i||o.v>t||(clearTimeout(o.j),o.j=setTimeout(function(){var t=performance.timing.navigationStart,e=w(o.g,o.b);t=(window.a&&window.a.A?1e3*window.a.A().C-t:0)||performance.timing.domContentLoadedEventEnd-t;if(o.u)var n=o.u;else n=performance.timing.domContentLoadedEventEnd?(n=performance.timing).domContentLoadedEventEnd-n.navigationStart:null;var r=performance.now();null===n&&y(o,Math.max(e+5e3,r+1e3));var i=o.a;(e=r-e<5e3?null:r-(e=i.length?i[i.length-1].end:t)<5e3?null:Math.max(e,n))&&(o.s(e),clearTimeout(o.j),o.i=!1,o.c&&o.c.disconnect(),o.h&&o.h.disconnect()),y(o,performance.now()+1e3)},t-performance.now()),o.v=t)}s.prototype.getFirstConsistentlyInteractive=function(){var e=this;return new Promise(function(t){e.s=t,"complete"==document.readyState?u(e):window.addEventListener("load",function(){u(e)})})},s.prototype.m=function(t){this.f.set(t,performance.now())},s.prototype.l=function(t){this.f.delete(t)},s.prototype.B=function(){y(this,performance.now()+5e3)},r.Object.defineProperties(s.prototype,{g:{configurable:!0,enumerable:!0,get:function(){return[].concat(p(this.f.values()))}}});try{if(window.dlRumData=[],"PerformanceLongTaskTiming"in window&&new s({}).getFirstConsistentlyInteractive().then(function(t){t&&window.dlRumData.push({metricName:"TTI",eventValue:t})}),"PerformanceObserver"in window)new PerformanceObserver(function(t){for(var e=t.getEntries(),n=0,r=e.length;n<r;n++){var i=e[n],o="",a=Math.round(i.startTime+i.duration);if("first-contentful-paint"===i.name)o="FCP";else{if("first-paint"!==i.name)continue;o="FP"}window.dlRumData.push({metricName:o,eventValue:a})}}).observe({entryTypes:["paint"]})}catch(t){}}();
+        </script>
+        <script type="text/javascript">
+        if(accConf&&accConf.rum&&accConf.rum.data)for(var key in window.dlRumData||(window.dlRumData=[]),accConf.rum.data)window.dlRumData.push({metricName:key,eventValue:accConf.rum.data[key]});
+        </script>
+        
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    
+
+  
+  <title>Serwis spo³ecznoœciowy nk.pl - platforma komunikacji dla wszystkich internautów - nk.pl</title>
+
+  
+    
+    <meta name="description" content="Serwis spo³ecznoœciowy nk.pl umo¿liwia kontakt z przyjació³mi i znajomymi online. Dostêpne narzêdzia to m.in.: poczta, mikroblog, grupy...">
+  
+
+  
+    
+    <meta property="og:title" content="Serwis spo³ecznoœciowy nk.pl - platforma komunikacji dla wszystkich internautów - nk.pl">
+  
+    
+    <meta property="og:type" content="article">
+  
+    
+    <meta property="fb:app_id" content="1709812959305423">
+  
+    
+    <meta property="og:description" content="Serwis spo³ecznoœciowy nk.pl umo¿liwia kontakt z przyjació³mi i znajomymi online. Dostêpne narzêdzia to m.in.: poczta, mikroblog, grupy...">
+  
+
+  
+
+  
+
+
+  
+
+  
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://0.s-nk.pl/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="https://0.s-nk.pl/img/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://0.s-nk.pl/img/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="https://0.s-nk.pl/files/favicons/manifest.json">
+<link rel="mask-icon" href="https://0.s-nk.pl/files/favicons/safari-pinned-tab.svg" color="#037fd6">
+<meta name="msapplication-TileColor" content="#0d66a5">
+<meta name="msapplication-TileImage" content="https://0.s-nk.pl/img/favicons/mstile-144x144.png">
+<meta name="theme-color" content="#0d66a5">
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600&subset=latin,latin-ext">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600&subset=latin,latin-ext">
+  <link rel="stylesheet" href="https://ocdn.eu/paas-static/nk/6d17c872c82cb5c872eaa8660d55a980/build/normalize.css">
+  <link rel="stylesheet" href="https://ocdn.eu/paas-static/nk/6d17c872c82cb5c872eaa8660d55a980/build/unlogged.css">
+
+
+  
+    
+    
+
+
+  <script>
+    var onetAds;
+
+    
+      var onetAds = ({"async":1,"autoslot":0,"mobile":1024,"target":"nk/zaloguj","no_gemius":1,"cookieInfo":0,"kropka":{"XS":"anonymous"},"lazy":1,"lazyPercentage":100,"forceCmp":1});
+    
+
+    if (onetAds) {
+        onetAds.lazyPercentage = (window.innerWidth < onetAds.mobile) ? 150 : 100;
+
+        try {
+
+          onetAds.keywords = [];
+
+          if (onetAds.kropka.XS !== 'anonymous') {
+            onetAds.keywords.push('USER_LOGGED');
+          }
+
+          if (pageTag.length > 0) {
+            onetAds.keywords.push(pageTag);
+          }
+
+        } catch(e) {}
+    }
+  </script>
+
+
+
+  <script src="//lib.onet.pl/s.csr/init/init.js?v=2020-10-11"></script>
+
+
+
+
+  
+
+  
+  <script src="https://ocdn.eu/paas-static/nk/6d17c872c82cb5c872eaa8660d55a980/build/gemius.js"></script>
+
+</head>
+<body class="u-b_white">
+  
+    <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NCPDPLL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NCPDPLL');
+</script>
+<!-- End Google Tag Manager -->
+
+  
+
+  
+    <ul id="skip-links" class="skip-links">
+  <li>
+    <a href="#menu-main" class="skip-link">Przeskocz do menu g³ównego ca³ej NK</a>
+  </li>
+  <li>
+    <a href="#menu-mate" class="skip-link">Przeskocz do menu wewnêtrznego</a>
+  </li>
+  <li>
+    <a href="#main-content" class="skip-link">Przeskocz do g³ównej treœci strony</a>
+  </li>
+  <li>
+    <a href="#sidebar" class="skip-link">Przeskocz do kolumny bocznej strony</a>
+  </li>
+  <li>
+    <a href="#footer" class="skip-link">Przeskocz do stopki</a>
+  </li>
+</ul>
+  
+
+  <div id="page" class="page page-login " >
+    
+
+    <div class="screening-container">
+      
+
+      
+  
+    
+    
+  
+  <div id="ad-wrapper-onet-ad-flat-belkagorna"
+       class="ad-wrapper sticker-wrapper  "
+       
+  >
+    <div data-run-module="components/adsLoader.init"
+         data-sticker-floating="noFloating"
+         data-sticker-refcontainer=".-ads-refcontainer"
+         data-sticker-wrapper="#ad-wrapper-onet-ad-flat-belkagorna"
+         data-ad-in-sidebar="false"
+         data-ad-device="any"
+         data-ad='{&quot;any&quot;:{&quot;id&quot;:&quot;onet-ad-flat-belkagorna&quot;,&quot;ad&quot;:&quot;flat-belkagorna&quot;}}'
+         class="center-group">
+
+      <div id="onet-ad-flat-belkagorna" data-autoslot="0" class="onet-ad u-m_top_0 u-m_bottom_0"></div>
+    </div>
+  </div>
+
+
+      
+        <div class="navigation -nav" data-run-module="components/componentNav.register" aria-hidden="true" aria-expanded="false">
+          <div id="-nav-morph" class="navigation__morph" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+              <path d="M-7.312,0C-7.312,0,100,0,100,0C100,0,100,113.839,100,400C100,664.506,100,800,100,800C100,800,-7.312,800,-7.312,800C-7.312,800,-7.312,0,-7.312,0C-7.312,0,-7.312,0,-7.312,0"></path>
+            </svg>
+          </div>
+          <div class="navigation__content">
+            <div class="navigation__content__topbar">
+              
+            </div>
+            <div class="navigation__content__links">
+              
+
+
+<nav>
+  <ul>
+    
+      <li class="js-gtm-click" data-gtm-click-label="Menu item clicked" data-gtm-click-value="Gry" data-gtm-click-action="profile/my-page/navigation/top-navbar"><a href="/gry-online" title="Gry" class="waves-effect">Gry</a></li>
+    
+      <li class="js-gtm-click" data-gtm-click-label="Menu item clicked" data-gtm-click-value="Szko³y" data-gtm-click-action="profile/my-page/navigation/top-navbar"><a href="/szkoly" title="Szko³y" class="waves-effect">Szko³y</a></li>
+    
+      <li class="js-gtm-click" data-gtm-click-label="Menu item clicked" data-gtm-click-value="Grupy" data-gtm-click-action="profile/my-page/navigation/top-navbar"><a href="/grupy" title="Grupy" class="waves-effect">Grupy</a></li>
+    
+      <li class="js-gtm-click" data-gtm-click-label="Menu item clicked" data-gtm-click-value="Forum" data-gtm-click-action="profile/my-page/navigation/top-navbar"><a href="/forum" title="Forum" class="waves-effect">Forum</a></li>
+    
+  </ul>
+</nav>
+
+
+              
+            </div>
+          </div>
+          <div class="navigation-rwd -nav-trigger" tabindex="0" aria-label="Rozwiñ menu g³ówne">
+            <div class="navigation-rwd__icon">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </div>
+          <div class="navigation__overlay -nav-overlay"></div>
+        </div>
+      
+
+      <div class="top">
+        <div class="l-container">
+          <header class="top-brand" role="banner">
+            <a href="/" title="Strona g³ówna NK" class="top-brand__logo js-gtm-click" data-gtm-click-action="profile/my-page/navigation/top-navbar" data-gtm-click-label="NK logo">
+              <i class="icon icon--logo_n"></i>
+              <i class="icon icon--logo_k"></i>
+            </a>
+            
+            
+  <h1 class="top-brand__title">Zaloguj siê</h1>
+
+          </header>
+          
+          <div class="navigation-rwd -nav-trigger" tabindex="0" aria-label="Rozwiñ menu g³ówne">
+            <div class="navigation-rwd__icon">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div id="content" class="social-graph-bg">
+        
+
+        
+
+        
+
+        
+          
+        
+
+        
+
+        
+
+        <div id="main" class="l-container">
+          
+
+          
+  <div id="main-content" class="content content--fullwide" role="main">
+    
+
+    
+  
+  
+    
+    
+  
+  <div id="ad-wrapper-onet-ad-top"
+       class="ad-wrapper sticker-wrapper  "
+       
+  >
+    <div data-run-module="components/adsLoader.init"
+         data-sticker-floating="noFloating"
+         data-sticker-refcontainer=".-ads-refcontainer"
+         data-sticker-wrapper="#ad-wrapper-onet-ad-top"
+         data-ad-in-sidebar=""
+         data-ad-device="any"
+         data-ad='{&quot;any&quot;:{&quot;id&quot;:&quot;onet-ad-top&quot;,&quot;ad&quot;:&quot;top&quot;}}'
+         class="center-group">
+
+      <div id="onet-ad-top" data-autoslot="0" class="onet-ad "></div>
+    </div>
+  </div>
+
+
+  <div class="grid u-p_relative">
+    <div class="grid-item grid-item--1of1 grid-item--xl_3of5">
+      
+
+<article class="unlogged-general-container unlogged-general-container--offset-none login-box">
+  <nav class="menu-mate menu-mate--small login-box__tabs">
+    <ul>
+      <li class="is-active"><span class="menu-mate__item">Logowanie</span></li>
+      
+        <li><a href="/rejestracja" title="PrzejdŸ do formularza rejestracji">Rejestracja</a></li>
+      
+    </ul>
+  </nav>
+  <div class="login-box__inner">
+    <div class="login-box__alerts">
+      
+        
+  
+    
+  
+
+  <div class="alert alert--error alert--text-below">
+    <div class="alert__content">
+      <div class="alert__content__col alert__content__col--state">
+        <div class="alert__content__col__wrapper">
+          <i class="icon icon--warning"></i>
+          
+            <span>Ups!</span>
+          
+        </div>
+      </div>
+      <div class="alert__content__col">
+        Podano nieprawid³ow¹ nazwê u¿ytkownika lub has³o.
+      </div>
+    </div>
+  </div>
+
+      
+    </div>
+    <form class="form" method="POST" action="/logowanie">
+      
+      <div class="form__field form__field--iconic">
+        <span class="icon icon--person form__field__icon" aria-hidden="true"></span>
+        <label for="login" class="u-sr-only">Login</label>
+        <input name="login" id="login" type="text" placeholder="E-mail / login" required value="vgwgsrnpxyybjnahtz@twzhhq.online">
+      </div>
+      <div class="form__field form__field--iconic">
+        <span class="icon icon--lock form__field__icon" aria-hidden="true"></span>
+        <label for="password" class="u-sr-only">Has³o</label>
+        <input name="password" id="password" type="password" placeholder="Has³o" required>
+      </div>
+      
+      <div class="form__field">
+        <button class="button button--medium button--just_full waves-effect" type="submit">Zaloguj siê</button>
+      </div>
+      <div class="grid form__field login-box__extras">
+        <div class="grid-item grid-item--1of2 checkbox-wrapper u-t_left">
+          <label for="remember">
+            <input name="remember" id="remember" type="checkbox"> Nie wylogowuj
+          </label>
+        </div>
+        <div class="grid-item grid-item--1of2 u-t_right">
+          <a class="link" href="/recover" title="PrzejdŸ do modu³u odzyskiwania has³a">Nie pamiêtasz has³a?</a>
+        </div>
+      </div>
+      <div id="fbS" class="login-box__separator login-box__hide">
+        <span>Lub</span>
+      </div>
+    </form>
+
+    <button class="button button--facebook login-box__hide" data-run-module="components/componentFbLoginButton.init"
+            data-fb-redirect-uri="https://nk.pl/logowanie/social"
+            data-fb-client-id="1709812959305423"
+            data-fb-response-type="code">
+      <span class="icon icon--facebook"></span>
+      <span>Zaloguj siê Facebookiem</span>
+    </button>
+
+  </div>
+</article>
+
+    </div>
+    <div class="grid-item grid-item--1of1 grid-item--xl_2of5 login-ad-box">
+      
+  
+    
+    
+    
+  
+  <div id="ad-wrapper-onet-ad-rectangle1"
+       class="ad-wrapper sticker-wrapper  u-d--desktop_only"
+       
+  >
+    <div data-run-module="components/adsLoader.init"
+         data-sticker-floating=""
+         data-sticker-refcontainer=".-ads-refcontainer"
+         data-sticker-wrapper="#ad-wrapper-onet-ad-rectangle1"
+         data-ad-in-sidebar=""
+         data-ad-device="desktop"
+         data-ad='{&quot;desktop&quot;:{&quot;id&quot;:&quot;onet-ad-rectangle1&quot;,&quot;ad&quot;:&quot;rectangle1&quot;}}'
+         class="center-group">
+
+      <div id="onet-ad-rectangle1" data-autoslot="0" class="onet-ad "></div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+  </div>
+
+        </div>
+      </div>
+
+      
+  <footer id="footer" class="footer footer--light">
+  <div class="footer__content">
+    <div class="l-container">
+      <div class="footer__links">
+          <ul>
+            <li class="footer__link">
+              <a href="/gry-online">Gry</a>
+            </li>
+            <li class="footer__link">
+              <a href="/grupy">Grupy</a>
+            </li>
+            <li class="footer__link">
+              <a href="/szkoly">Szko³y i klasy</a>
+            </li>
+            <li class="footer__link">
+              <a href="/forum">Forum</a>
+            </li>
+            <li class="footer__link">
+              <a href="/pomoc">Pomoc</a>
+            </li>
+            <li class="footer__link">
+              <a href="/nk_policy">Polityka prywatnoœci</a>
+            </li>
+            <li class="footer__link">
+              <a href="/reklama">Reklama</a>
+            </li>
+            <li class="footer__link">
+              <a href="/zapytania_ofertowe">Zapytania ofertowe</a>
+            </li>
+            <li class="footer__link">
+              <a href="/bezpieczenstwo">Bezpieczeñstwo</a>
+            </li>
+            <li class="footer__link">
+              <a href="/blog">Blog NK</a>
+            </li>
+            <li class="footer__link">
+              <a href="/contact">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__info">
+        <p>Copyright &copy; 2006 - 2020 nk.pl, korzystanie z serwisu oznacza akceptacjê <a href="/regulamin_2011" class="link link--chameleon link--underlined" target="_blank">regulaminu</a> w aktualnym brzmieniu (ostatnia aktualizacja 12.03.2019r.).</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    
+
+    
+      <div class="notification -notification">
+  <div class="notification__content -notification-content"></div>
+  <i class="notification__closer icon icon--close -notification-closer"></i>
+  <div class="notification__counter -notification-counter">
+    <div class="notification__counter__circle">
+      <svg>
+        <path class="-notification-counter-path" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"></path>
+      </svg>
+    </div>
+    <span class="notification__counter__seconds -notification-counter-seconds"></span>
+  </div>
+</div>
+
+    
+  </div>
+
+  
+  <script src="https://ocdn.eu/paas-static/nk/6d17c872c82cb5c872eaa8660d55a980/build/materialize.js"></script>
+  <script src="//ocdn.eu/paas-static/nk/6d17c872c82cb5c872eaa8660d55a980/build/datepicker.js"></script>
+  <script src="//ocdn.eu/paas-static/nk/6d17c872c82cb5c872eaa8660d55a980/build/tooltipster.js"></script>
+  <script>$.noConflict()</script>
+  <script src="https://ocdn.eu/paas-static/nk/6d17c872c82cb5c872eaa8660d55a980/build/main.js"></script>
+  <script src="https://ocdn.eu/paas-static/nk/6d17c872c82cb5c872eaa8660d55a980/build/amd.js" data-static-amd-map="{&quot;components&quot;:&quot;//ocdn.eu/paas-static/nk/6d17c872c82cb5c872eaa8660d55a980/build&quot;}"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+
+
+  <a href="#skip-links" class="skip-link">Przeskocz na sam¹ górê strony</a>
+</body>
+</html>

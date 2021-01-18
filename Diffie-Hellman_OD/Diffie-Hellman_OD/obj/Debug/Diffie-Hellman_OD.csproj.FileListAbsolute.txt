@@ -1,0 +1,7 @@
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\Diffie-Hellman_OD\bin\Debug\Diffie-Hellman_OD.exe.config
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\Diffie-Hellman_OD\bin\Debug\Diffie-Hellman_OD.exe
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\Diffie-Hellman_OD\bin\Debug\Diffie-Hellman_OD.pdb
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\Diffie-Hellman_OD\obj\Debug\Diffie-Hellman_OD.csprojAssemblyReference.cache
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\Diffie-Hellman_OD\obj\Debug\Diffie-Hellman_OD.csproj.CoreCompileInputs.cache
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\Diffie-Hellman_OD\obj\Debug\Diffie-Hellman_OD.exe
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\Diffie-Hellman_OD\obj\Debug\Diffie-Hellman_OD.pdb

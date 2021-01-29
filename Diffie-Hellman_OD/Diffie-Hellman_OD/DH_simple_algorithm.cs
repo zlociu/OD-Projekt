@@ -6,13 +6,13 @@ namespace Diffie_Hellman_OD
 {
     class DH
     {
-        private UInt32 n, g, x, y, kA, kB;
+        private UInt32 p, g, x, y, kA, kB;
         public UInt32 X, Y;
         Random rand = new Random();
 
         public void Display()
         {
-            Console.WriteLine("n: {0}", n);
+            Console.WriteLine("p: {0}", p);
             Console.WriteLine("g: {0}", g);
             Console.WriteLine("x: {0}", x);
             Console.WriteLine("y: {0}", y);
@@ -24,7 +24,7 @@ namespace Diffie_Hellman_OD
 
         public DH()
         {
-            n = 12853;
+            p = 12853;
             g = 11491;
         }
 
@@ -62,10 +62,10 @@ namespace Diffie_Hellman_OD
             {
                 if (y % 2 == 1)
                 {
-                    result = result * x % n;
+                    result = result * x % p;
                 }
                 y /= 2;
-                x = x * x % n;
+                x = x * x % p;
             }
             return result;
         }

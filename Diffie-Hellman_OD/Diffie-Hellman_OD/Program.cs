@@ -16,6 +16,16 @@ namespace Diffie_Hellman_OD
             dh.B1();
             dh.kCheck();
             dh.Display();
+
+            DiffieHellman diffieHellman = new DiffieHellman();
+
+            string text = "Hello world.";
+
+            byte[] ciphered = diffieHellman.Encrypt(diffieHellman.PublicKey, text);
+
+            Console.WriteLine(Encoding.Default.GetString(ciphered));
+            Console.WriteLine(diffieHellman.Decrypt(diffieHellman.PublicKey, ciphered, diffieHellman.IV));
+
         }
     }
 }

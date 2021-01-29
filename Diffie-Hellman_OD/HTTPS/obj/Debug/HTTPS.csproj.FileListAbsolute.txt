@@ -1,0 +1,12 @@
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\HTTPS\bin\Debug\HTTPS.exe.config
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\HTTPS\bin\Debug\HTTPS.exe
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\HTTPS\bin\Debug\HTTPS.pdb
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\HTTPS\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\HTTPS\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\HTTPS\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\HTTPS\bin\Debug\Newtonsoft.Json.dll
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\HTTPS\obj\Debug\HTTPS.csprojAssemblyReference.cache
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\HTTPS\obj\Debug\HTTPS.csproj.CoreCompileInputs.cache
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\HTTPS\obj\Debug\HTTPS.csproj.CopyComplete
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\HTTPS\obj\Debug\HTTPS.exe
+C:\Users\karol\source\repos\Projekt Telefonia IP\OD-Projekt\Diffie-Hellman_OD\HTTPS\obj\Debug\HTTPS.pdb

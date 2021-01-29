@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diffie-Hellman_OD", "Diffie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diffie-Hellman_OD.Tests", "Diffie-Hellman_OD.Tests\Diffie-Hellman_OD.Tests.csproj", "{33D3155E-8534-4851-8CB9-3421F98EA69A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTTPS", "HTTPS\HTTPS.csproj", "{8265F834-5326-46BD-ABC9-A355FEAA062F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{33D3155E-8534-4851-8CB9-3421F98EA69A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33D3155E-8534-4851-8CB9-3421F98EA69A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33D3155E-8534-4851-8CB9-3421F98EA69A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8265F834-5326-46BD-ABC9-A355FEAA062F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8265F834-5326-46BD-ABC9-A355FEAA062F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8265F834-5326-46BD-ABC9-A355FEAA062F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8265F834-5326-46BD-ABC9-A355FEAA062F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
